@@ -61,3 +61,161 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-font-2);
 }
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/*  global classes */
+
+/* section */
+.section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+@media screen and (min-width: 992px) {
+  .section {
+    width: 95vw;
+  }
+}
+
+/*
+=============== 
+Stripe Styles
+===============
+*/
+.nav {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+.nav-center {
+  width: 90vw;
+  max-width: var(--max-width);
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  font-size: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius);
+  border-color: transparent;
+  color: white;
+  background: var(--clr-black);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn:hover {
+  background: var(--clr-grey-5);
+}
+.nav-links {
+  display: none;
+}
+.contact-btn {
+  display: none;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 65%;
+  top: 0;
+  left: 0;
+  background: url(./images/hero.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.hero {
+  position: relative;
+  min-height: 100vh;
+  margin-top: -5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.hero-center {
+  width: 90vw;
+  max-width: var(--max-width);
+  display: grid;
+  align-items: center;
+}
+
+.hero-info h1 {
+  text-transform: none;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+.hero-info p {
+  max-width: 35em;
+  line-height: 1.8;
+}
+.hero-images {
+  display: none;
+}
+
+/* nav media query */
+@media screen and (min-width: 800px) {
+  .nav-center {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+  .toggle-btn {
+    display: none;
+  }
+  .signin-btn {
+    display: inline-block;
+  }
+  .nav-links {
+    display: block;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    height: 100%;
+    display: grid;
+    align-items: center;
+  }
+  .nav-links li {
+    height: 100%;
+  }
+  .link-btn {
+    height: 100%;
+    background: transparent;
+    border-color: transparent;
+    font-size: 1.1rem;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    width: 10rem;
+  }
+}
