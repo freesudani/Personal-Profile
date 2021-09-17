@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useGlobalContext } from "./context";
+import "../index.css";
 
 const Submenu = () => {
   const {

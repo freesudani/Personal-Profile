@@ -1,5 +1,8 @@
 import React from "react";
-import { useGlobalContext } from "../components/context";
+import { useGlobalContext } from "./context";
+import { FaBars } from "react-icons/fa";
+import logo from "../images/df541ece3e1e46bab776fdb05964ef38.png";
+import "../index.css";
 
 const Navbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
@@ -21,7 +24,7 @@ const Navbar = () => {
         <div className="nav-header">
           <img src={logo} className="nav-logo" alt="logo" />
           <button className="btn" onClick={openSidebar}>
-            <FaBar />
+            <FaBars />
           </button>
         </div>
         <ul className="nav-links">
