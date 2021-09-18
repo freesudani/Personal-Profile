@@ -5,7 +5,7 @@ import { SiNetlify } from "react-icons/si";
 const sublinks = [
   {
     page: "About Me",
-    link: [
+    links: [
       { label: "Biography", icon: <FaBaby />, url: "/biography" },
       { label: "Education", icon: <FaBookOpen />, url: "/education" },
       { label: "Achievments", icon: <FaTrophy />, url: "/achievments" },
@@ -13,9 +13,17 @@ const sublinks = [
   },
   {
     page: "Contact",
-    link: [
-      { label: "Github", icon: <FaGithub />, url: "/github" },
-      { label: "Netlify", icon: <SiNetlify />, url: "/netlify" },
+    links: [
+      {
+        label: "Github",
+        icon: <FaGithub />,
+        url: "https://github.com/freesudani",
+      },
+      {
+        label: "Netlify",
+        icon: <SiNetlify />,
+        url: "https://app.netlify.com/teams/freesudani/overview",
+      },
     ],
   },
 ];

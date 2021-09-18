@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import sublinks from "../data/data";
-
 const AppContext = React.createContext();
+
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
@@ -10,6 +10,7 @@ const AppProvider = ({ children }) => {
   const openSidebar = () => {
     setIsSidebarOpen(true);
   };
+
   const closeSidebar = () => {
     setIsSidebarOpen(false);
   };

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useGlobalContext } from "./context";
 import "../index.css";
+import "./Submenu.css";
 
 const Submenu = () => {
   const {
@@ -8,6 +9,8 @@ const Submenu = () => {
     page: { page, links },
     location,
   } = useGlobalContext();
+
+  console.log(links);
   const container = useRef(null);
   const [columns, setColumns] = useState("col-2");
   useEffect(() => {
@@ -35,7 +38,11 @@ const Submenu = () => {
           {links.map((link, index) => {
             const { url, icon, label } = link;
             return (
-              <a key={index} href={url}>
+              <a
+                key={index}
+                href={url}
+                target={label === "Github" ? "_blank" : null}
+              >
                 {icon}
                 {label}
               </a>

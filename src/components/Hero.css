@@ -1,0 +1,57 @@
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 65%;
+  top: 0;
+  left: 0;
+  background: url();
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.hero {
+  position: relative;
+  min-height: 100vh;
+  margin-top: -5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.hero-center {
+  width: 90vw;
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+.hero-info h2 {
+  text-transform: none;
+  max-width: 1000px;
+  margin-bottom: 2rem;
+  text-align: justify;
+  color: var(--clr-primary-10);
+}
+.hero-info h4 {
+  max-width: 40em;
+  line-height: 1.8;
+  color: var(--clr-primary-9);
+}
+
+.hero-nameit {
+  font-style: italic;
+}
+.hero-images {
+  display: inline;
+  height: 30rem;
+  justify-self: center;
+  align-self: center;
+  margin-top: 4rem;
+  margin-left: 3rem;
+}
+
+.phone-img {
+  height: 80%;
+}

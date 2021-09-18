@@ -1,8 +1,10 @@
 import React from "react";
 import { useGlobalContext } from "./context";
 import { FaBars } from "react-icons/fa";
+import phoneImg from "../images/phone-call-icon.svg";
 import logo from "../images/df541ece3e1e46bab776fdb05964ef38.png";
 import "../index.css";
+import "./Navbar.css";
 
 const Navbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
@@ -39,7 +41,9 @@ const Navbar = () => {
             </button>
           </li>
         </ul>
-        <button className="btn contact-btn">Contact us</button>
+        <button className="btn contact-btn">
+          <img src={phoneImg} className="phone-img" alt="phone" />
+        </button>
       </div>
     </nav>
   );
