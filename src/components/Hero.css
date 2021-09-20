@@ -5,7 +5,7 @@
   height: 65%;
   top: 0;
   left: 0;
-  background: url();
+  background: var(--clr-bg);
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;

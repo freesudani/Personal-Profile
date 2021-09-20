@@ -7,6 +7,7 @@ const AppProvider = ({ children }) => {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [page, setPage] = useState({ page: "", links: [] });
   const [location, setLocation] = useState({});
+  const [showPhone, setShowPhone] = useState(false);
   const openSidebar = () => {
     setIsSidebarOpen(true);
   };
@@ -23,6 +24,10 @@ const AppProvider = ({ children }) => {
   const closeSubmenu = () => {
     setIsSubmenuOpen(false);
   };
+
+  const ShowPhoneNumber = () => {
+    setShowPhone(true);
+  };
   return (
     <AppContext.Provider
       value={{
@@ -34,6 +39,8 @@ const AppProvider = ({ children }) => {
         closeSubmenu,
         page,
         location,
+        ShowPhoneNumber,
+        showPhone,
       }}
     >
       {children}

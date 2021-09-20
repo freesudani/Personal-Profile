@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Submenu from "./components/Submenu";
+import Packages from "./components/Packages";
 import "./index.css";
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <Sidebar />
       <Hero />
       <Submenu />
+      <Packages />
     </>
   );
 };

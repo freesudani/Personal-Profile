@@ -7,7 +7,8 @@ import "../index.css";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
+  const { ShowPhoneNumber, showPhone, openSidebar, openSubmenu, closeSubmenu } =
+    useGlobalContext();
   const displaySubmenu = (e) => {
     const page = e.target.textContent;
     const tempBtn = e.target.getBoundingClientRect();
@@ -41,8 +42,9 @@ const Navbar = () => {
             </button>
           </li>
         </ul>
-        <button className="btn contact-btn">
+        <button className="btn contact-btn" onMouseOut={ShowPhoneNumber}>
           <img src={phoneImg} className="phone-img" alt="phone" />
+          <div className="extended-phone">.</div>
         </button>
       </div>
     </nav>

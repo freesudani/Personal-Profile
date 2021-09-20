@@ -59,9 +59,26 @@
   width: 3rem;
   background: transparent;
   border: none;
+  z-index: 3;
   /* display: none; */
 }
 
 .phone-img {
   width: 100%;
+}
+
+.extended-phone {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  top: 4.7rem;
+  right: 7.3rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.extended-phone:hover {
+  transform: scaleX(10);
+  color: greenyellow;
 }
