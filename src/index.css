@@ -7,8 +7,8 @@
   --clr-font-2: hsl(210, 22%, 49%);
   --clr-black: #222;
   --clr-white: #fff;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --light-shadow: 0 2.5px 10px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 2.5px 10px rgba(0, 0, 0, 0.7);
   --spacing: 0.1rem;
   --max-width: 1170px;
   --radius: 0.25rem;
@@ -99,6 +99,7 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-font-2);
 }
+
 /* @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;

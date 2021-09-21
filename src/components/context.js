@@ -8,6 +8,7 @@ const AppProvider = ({ children }) => {
   const [page, setPage] = useState({ page: "", links: [] });
   const [location, setLocation] = useState({});
   const [showPhone, setShowPhone] = useState(false);
+
   const openSidebar = () => {
     setIsSidebarOpen(true);
   };
@@ -28,6 +29,7 @@ const AppProvider = ({ children }) => {
   const ShowPhoneNumber = () => {
     setShowPhone(true);
   };
+
   return (
     <AppContext.Provider
       value={{

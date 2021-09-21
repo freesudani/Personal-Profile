@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
+import { BsCheckAll } from "react-icons/bs";
+import networkReceieve from "../images/network-receive.png";
 import "./Packages.css";
+import "../index.css";
 
 const Card3 = (props) => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -8,27 +11,42 @@ const Card3 = (props) => {
     e.preventDefault();
     setIsFlipped(!isFlipped);
   };
+
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
       <div className="card">
-        <img
-          scr={props.list.image}
-          alt={props.list.title}
-          className="card-image"
-        />
-        <h3>{props.list.title}</h3>
-        <button onClick={handleClick}>Click to flip</button>
+        <div className="image-box">
+          <img
+            src={props.list.image}
+            alt={props.list.title}
+            className="card-image"
+          />
+        </div>
+        <h3 className="card-title">{props.list.title}</h3>
+        <button onClick={handleClick} className="btn-flip">
+          more details
+        </button>
       </div>
-
       <div className="card">
-        <p>{props.list.desc}</p>
-        <p>{props.list.price}</p>
-        <ul>
+        <h4 className="card-backheading">{props.list.desc}</h4>
+        <h4 className="card-price">
+          {props.list.price.toLocaleString("en-US")}฿
+        </h4>
+        <ul className="card-list">
           {props.list.details.map((detail) => {
-            return <li>{detail}</li>;
+            return (
+              <li className="card-item">
+                <span className="card-icon">
+                  <BsCheckAll />
+                </span>
+                <p className="card-detail">{detail}</p>
+              </li>
+            );
           })}
         </ul>
-        <button onClick={handleClick}>Click to flip</button>
+        <button onClick={handleClick} className="btn-flip">
+          Go back
+        </button>
       </div>
     </ReactCardFlip>
   );
