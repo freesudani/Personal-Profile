@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import Submenu from "./components/Submenu";
 import Packages from "./components/Packages";
 import "./index.css";
+import Reviews from "./components/Reviews";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Hero />
       <Submenu />
       <Packages />
+      <Reviews />
     </>
   );
 };

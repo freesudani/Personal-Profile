@@ -4,7 +4,9 @@ import { useGlobalContext } from "./context";
 import { motion } from "framer-motion";
 import { PhotoVariant } from "./Variants";
 import { ParagVariant } from "./Variants";
+
 import "./Hero.css";
+import Skills from "./Skills";
 
 const Hero = () => {
   const { closeSubmenu } = useGlobalContext();
@@ -44,6 +46,7 @@ const Hero = () => {
           <img src={phoneImg} className="phone-img" alt="phone" />
         </motion.article>
       </div>
+      <Skills />
     </section>
   );
 };

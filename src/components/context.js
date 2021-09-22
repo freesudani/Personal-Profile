@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import sublinks from "../data/data";
+
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
@@ -8,6 +9,7 @@ const AppProvider = ({ children }) => {
   const [page, setPage] = useState({ page: "", links: [] });
   const [location, setLocation] = useState({});
   const [showPhone, setShowPhone] = useState(false);
+  const [index, setIndex] = useState(0);
 
   const openSidebar = () => {
     setIsSidebarOpen(true);
@@ -43,6 +45,8 @@ const AppProvider = ({ children }) => {
         location,
         ShowPhoneNumber,
         showPhone,
+        index,
+        setIndex,
       }}
     >
       {children}
