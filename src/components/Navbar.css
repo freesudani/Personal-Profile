@@ -1,15 +1,15 @@
 .nav {
-  height: 10rem;
+  height: 7.5rem;
   width: 100%;
-  background: transparent;
+
   position: relative;
   z-index: 1;
+  background: var(--clr-bg);
 }
 .nav-center {
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
   align-items: center;
-  margin-top: -2rem;
 }
 .nav-header {
   grid-column: 1/2;
@@ -76,9 +76,4 @@
   top: 4.7rem;
   right: 7.3rem;
   transition: all 0.2s ease-in-out;
-}
-
-.extended-phone:hover {
-  transform: scaleX(10);
-  color: greenyellow;
 }
