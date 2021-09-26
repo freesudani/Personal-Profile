@@ -6,6 +6,7 @@ import Submenu from "./components/Submenu";
 import Packages from "./components/Packages";
 import "./index.css";
 import Reviews from "./components/Reviews";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Submenu />
       <Packages />
       <Reviews />
+      <Contact />
     </>
   );
 };

@@ -1,0 +1,131 @@
+.contact {
+  height: 90vh;
+  background: var(--clr-black);
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 2rem;
+  overflow: hidden;
+}
+.instructions {
+  grid-column: 2/3;
+  grid-row: 1/-1;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-white);
+}
+.instructions h2 {
+  text-transform: uppercase;
+}
+.form-selection {
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
+  background: var(--clr-grey-10);
+
+  height: 90%;
+  border-radius: var(--radius);
+  border: 3px solid var(--clr-primary-1);
+  padding: 1rem;
+  position: relative;
+}
+
+.form-container {
+  grid-row: 1/2;
+  grid-column: 1 / -1;
+  padding: 1rem;
+  height: 23rem;
+  border-radius: var(--radius);
+  border: 3px solid var(--clr-red-dark);
+}
+.form-container h4 {
+  color: var(--clr-black);
+  text-align: center;
+  width: 100%;
+}
+
+.username {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 90%;
+  border-radius: 5px;
+}
+label {
+  display: block;
+  color: var(--clr-black);
+  font-weight: bold;
+  margin-bottom: 0.1rem;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 8rem;
+  width: 15rem;
+}
+
+select {
+  height: 5rem;
+  width: 10rem;
+}
+
+select option {
+  padding: 0.3rem;
+}
+
+.btn-submit {
+  position: absolute;
+  right: 5rem;
+  top: 15rem;
+  background: var(--clr-primary-10);
+  color: var(--clr-primary-1);
+  text-transform: uppercase;
+  height: 3rem;
+  width: 9rem;
+  border-radius: var(--radius);
+  border: none;
+  box-shadow: var(--dark-shadow);
+  transition: all 0.5s ease-in;
+}
+
+.btn-submit:hover {
+  background: var(--clr-primary-1);
+  color: var(--clr-white);
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  grid-row: 2/3;
+  grid-column: 1/-1;
+}
+
+.select-btn {
+  background: var(--clr-primary-10);
+  color: var(--clr-primary-1);
+  text-transform: uppercase;
+  height: 3rem;
+  width: 9rem;
+  align-self: center;
+  border-radius: var(--radius);
+  border: none;
+  box-shadow: var(--dark-shadow);
+  transition: all 0.5s ease-in;
+  grid-row: 5/6;
+  grid-column: 2/3;
+}
+.select-btn:hover {
+  background: var(--clr-primary-1);
+  color: var(--clr-white);
+}
