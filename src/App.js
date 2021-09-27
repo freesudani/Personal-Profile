@@ -7,6 +7,7 @@ import Packages from "./components/Packages";
 import "./index.css";
 import Reviews from "./components/Reviews";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Packages />
       <Reviews />
       <Contact />
+      <Footer />
     </>
   );
 };

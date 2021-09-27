@@ -1,0 +1,21 @@
+.footer {
+  height: 30vh;
+  background: var(--clr-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+}
+.social-list {
+  list-style: none;
+}
+.social-list li {
+  display: inline-block;
+  margin: 3rem;
+  font-size: 3rem;
+}
+
+.social-list a {
+  color: var(--clr-white);
+}
