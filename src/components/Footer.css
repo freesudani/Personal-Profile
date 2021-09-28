@@ -1,6 +1,6 @@
 .footer {
   height: 30vh;
-  background: var(--clr-bg);
+  background: rgb(26, 25, 25);
   display: flex;
   justify-content: space-between;
   align-items: center;

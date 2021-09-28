@@ -1,106 +1,39 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FormVariant } from "./Variants";
+import { BsArrowLeft } from "react-icons/bs";
+import { useGlobalContext } from "./context";
 import "./Contact.css";
 
-const Contact = (props) => {
-  const nameInputRef = useRef();
-  const emailInputRef = useRef();
-  const nameInputRef2 = useRef();
-  const emailInputRef2 = useRef();
-  const messageInputRef = useRef();
-  const packageInputRef = useRef();
-
-  const [error, setError] = useState(false);
-  const [showSuggestionsForm, setShowSuggestionsForm] = useState(false);
-  const [showPackageForm, setShowPackageForm] = useState(true);
-
-  const sendSuggestionHandler = (event) => {
-    event.preventDefault();
-    const enteredName = nameInputRef.current.value;
-    const enteredEmail = emailInputRef.current.value;
-    const eneteredMessage = messageInputRef.current.value;
-    if (enteredName.trim().length === 0 || enteredEmail.trim().length === 0) {
-      setError({
-        title: "invalid input",
-        message: "Please enter a valid name or an Email",
-      });
-      return;
-    }
-    if (!enteredEmail.includes("@")) {
-      setError({
-        title: "invalid E-mail address",
-        message: "Please enter a valid Email",
-      });
-      return;
-    }
-    if (eneteredMessage.trim().length < 10) {
-      setError({
-        title: "invalid message",
-        message: "Incluse a message",
-      });
-      return;
-    }
-    props.onSend(enteredName, enteredEmail, eneteredMessage);
-    nameInputRef.current.value = "";
-    emailInputRef.current.value = "";
-    messageInputRef.current.value = "";
-  };
-  const sendPackageHandler = (event) => {
-    event.preventDefault();
-    const enteredName2 = nameInputRef2.current.value;
-    const enteredEmail2 = emailInputRef2.current.value;
-    const enteredPackage = packageInputRef.current.value;
-    if (enteredName2.trim().length === 0 || enteredEmail2.trim().length === 0) {
-      setError({
-        title: "invalid input",
-        message: "Please enter a valid name or an Email",
-      });
-      return;
-    }
-    if (!enteredEmail2.includes("@")) {
-      setError({
-        title: "invalid E-mail address",
-        message: "Please enter a valid Email",
-      });
-      return;
-    }
-    if (enteredPackage) {
-      setError({
-        title: "Package",
-        message: "Please Choose a package",
-      });
-      return;
-    }
-    props.onDemand(enteredName2, enteredEmail2, enteredPackage);
-    nameInputRef2.current.value = "";
-    emailInputRef2.current.value = "";
-    packageInputRef.current.value = "";
-  };
-
-  const errorHandler = () => {
-    setError(null);
-  };
-
-  const suggestionFormHandler = () => {
-    setShowPackageForm(false);
-    setShowSuggestionsForm(true);
-  };
-  const packageFormHandler = () => {
-    setShowSuggestionsForm(false);
-    setShowPackageForm(true);
-  };
+const Contact = () => {
+  const {
+    showSuggestionsForm,
+    sendSuggestionHandler,
+    nameInputRef,
+    emailInputRef,
+    messageInputRef,
+    showPackageForm,
+    sendPackageHandler,
+    nameInputRef2,
+    emailInputRef2,
+    packageInputRef,
+    suggestionFormHandler,
+    packageFormHandler,
+  } = useGlobalContext();
 
   return (
     <div className="contact">
       <div className="instructions">
         <h2>We're happy to hear from you</h2>
         <h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae
-          dolore labore reiciendis deleniti iusto repudiandae doloremque a eum
-          esse explicabo similique aliquam nemo commodi voluptate, totam nisi
-          repellendus quam.
+          Please feel free to contact me on for any suggestions or complains ,
+          and also explore our packages options , we delighted to explore new
+          opportunities with our clients and get to know more people who want to
+          engage with me on a new journy together.
         </h3>
+        <div>
+          <BsArrowLeft /> <span>Please Choose</span>
+        </div>
       </div>
 
       <div className="form-selection">
@@ -111,7 +44,7 @@ const Contact = (props) => {
             variants={FormVariant}
             initial="hidden"
             animate="visible"
-            transition={{ ease: "easeIn", duration: 2.5 }}
+            transition={{ ease: "easeIn", duration: 1 }}
           >
             <h4>Suggestions and complains</h4>
             <div>
@@ -140,7 +73,7 @@ const Contact = (props) => {
             variants={FormVariant}
             initial="hidden"
             animate="visible"
-            transition={{ ease: "easeIn", duration: 2.5 }}
+            transition={{ ease: "easeIn", duration: 1 }}
           >
             <h4>Pick a Package</h4>
             <div>

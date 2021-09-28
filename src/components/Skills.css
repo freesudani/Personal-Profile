@@ -1,12 +1,12 @@
 .skills {
   position: absolute;
   display: grid;
-  background: var(--clr-bg);
+  background: transparent;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-gap: 2.5rem;
   font-size: 3rem;
-  bottom: 4.5rem;
+  bottom: 7rem;
   left: 5rem;
-  color: var(--clr-primary-9);
+  color: var(--clr-white);
 }
