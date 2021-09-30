@@ -10,3 +10,16 @@
   left: 5rem;
   color: var(--clr-white);
 }
+
+@media screen and (max-width: 1000px) {
+  .skills {
+    grid-gap: 2rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .skills {
+    grid-gap: 3rem;
+  }
+}

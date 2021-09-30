@@ -129,3 +129,45 @@ select option {
   background: var(--clr-primary-1);
   color: var(--clr-white);
 }
+
+@media screen and (max-width: 1000px) {
+  .contact {
+    height: 60vh;
+  }
+  .form-selection {
+    height: 100%;
+  }
+
+  .form-container {
+    height: 25rem;
+  }
+  .buttons-container {
+    flex-direction: column;
+  }
+
+  .btn-submit {
+    right: 1rem;
+    top: 20.5rem;
+  }
+
+  .select-btn {
+    margin: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contact {
+    height: 90vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .instructions {
+    display: none;
+  }
+
+  .form-selection {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+}

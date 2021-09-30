@@ -72,3 +72,32 @@
 .phone-img {
   height: 80%;
 }
+
+@media screen and (max-width: 1000px) {
+  .hero {
+    min-height: 50vh;
+  }
+  .hero-images {
+    height: 25rem;
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero-images {
+    display: none;
+  }
+
+  .hero-center {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .hero-info h2 {
+    width: 100%;
+  }
+  .hero-info h4 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
