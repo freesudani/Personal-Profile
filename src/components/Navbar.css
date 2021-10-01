@@ -87,4 +87,22 @@
 }
 
 @media screen and (max-width: 700px) {
+  .btn {
+    display: block;
+    font-size: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius);
+    border-color: transparent;
+    color: white;
+    background: var(--clr-black);
+    cursor: pointer;
+    transition: var(--transition);
+    top: 0;
+  }
+  .btn:hover {
+    background: var(--clr-grey-5);
+  }
+  .contact-btn {
+    display: none;
+  }
 }

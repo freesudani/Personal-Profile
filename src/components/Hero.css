@@ -84,6 +84,9 @@
 }
 
 @media screen and (max-width: 700px) {
+  .hero {
+    height: 50rem;
+  }
   .hero-images {
     display: none;
   }
@@ -92,6 +95,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    transform: translateY(-150px);
   }
   .hero-info h2 {
     width: 100%;
@@ -99,5 +103,6 @@
   .hero-info h4 {
     width: 100%;
     max-width: 100%;
+    margin-bottom: 0rem;
   }
 }

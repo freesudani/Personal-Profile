@@ -157,9 +157,10 @@ select option {
 
 @media screen and (max-width: 700px) {
   .contact {
-    height: 90vh;
+    height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    padding: 1rem;
   }
 
   .instructions {

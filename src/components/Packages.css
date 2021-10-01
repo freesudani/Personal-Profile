@@ -125,4 +125,7 @@
   .card-image {
     width: 40%;
   }
+  .card-list {
+    padding-left: 1rem;
+  }
 }

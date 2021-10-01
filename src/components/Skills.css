@@ -20,6 +20,9 @@
 
 @media screen and (max-width: 700px) {
   .skills {
+    height: 14rem;
     grid-gap: 3rem;
+    bottom: 12rem;
+    left: 1rem;
   }
 }
