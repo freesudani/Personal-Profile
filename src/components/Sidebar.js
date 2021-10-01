@@ -1,4 +1,5 @@
 import React from "react";
+import "./Sidebar.css";
 import { FaTimes } from "react-icons/fa";
 import { useGlobalContext } from "./context";
 import sublinks from "../data/data";

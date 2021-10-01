@@ -33,9 +33,9 @@ const Card3 = (props) => {
           {props.list.price.toLocaleString("en-US")}฿
         </h4>
         <ul className="card-list">
-          {props.list.details.map((detail) => {
+          {props.list.details.map((detail, index) => {
             return (
-              <li className="card-item">
+              <li className="card-item" key={index}>
                 <span className="card-icon">
                   <BsCheckAll />
                 </span>

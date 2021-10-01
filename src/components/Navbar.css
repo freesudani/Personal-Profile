@@ -30,8 +30,8 @@
   transition: var(--transition); */
 }
 .btn:hover {
-  /* display: none; */
-  /* background: var(--clr-grey-5); */
+  display: none;
+  background: var(--clr-grey-5);
 }
 .nav-links {
   display: block;
