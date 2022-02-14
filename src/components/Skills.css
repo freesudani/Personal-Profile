@@ -4,11 +4,49 @@
   background: transparent;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  grid-gap: 2.5rem;
+  grid-gap: 2.8rem;
   font-size: 3rem;
-  bottom: 7rem;
+  margin-top: 25rem;
   left: 5rem;
   color: var(--clr-white);
+}
+
+.htmlIcon {
+  color: #e34c26;
+}
+
+.cssIcon {
+  color: #264de4;
+}
+
+.jsIcon {
+  color: #f0db4f;
+}
+
+.SassIcon {
+  color: #cc6699;
+}
+
+.reactIcon {
+  color: #7cc5d9;
+}
+
+.nextIcon {
+  color: #45ce05;
+}
+
+.typeScriptIcon {
+  color: #007acc;
+}
+
+.htmlIcon:hover,
+.cssIcon:hover,
+.jsIcon:hover,
+.SassIcon:hover,
+.reactIcon:hover,
+.nextIcon:hover,
+.typeScriptIcon:hover {
+  font-size: 3.2rem;
 }
 
 @media screen and (max-width: 1000px) {

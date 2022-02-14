@@ -9,6 +9,7 @@ import {
   SiNextDotJs,
   SiTypescript,
 } from "react-icons/si";
+import { IconContext } from "react-icons";
 import { ParagVariant } from "./Variants";
 import "./Skills.css";
 
@@ -21,27 +22,41 @@ const Skills = () => {
       animate="visible"
       transition={{ ease: "easeIn", duration: 2.5 }}
     >
-      <div>
-        <SiHtml5 />
-      </div>
-      <div>
-        <SiCss3 />
-      </div>
-      <div>
-        <SiJavascript />
-      </div>
-      <div>
-        <SiSass />
-      </div>
-      <div>
-        <SiReact />
-      </div>
-      <div>
-        <SiNextDotJs />
-      </div>
-      <div>
-        <SiTypescript />
-      </div>
+      <IconContext.Provider value={{ className: "htmlIcon" }}>
+        <div>
+          <SiHtml5 />
+        </div>
+      </IconContext.Provider>
+      <IconContext.Provider value={{ className: "cssIcon" }}>
+        <div>
+          <SiCss3 />
+        </div>
+      </IconContext.Provider>
+      <IconContext.Provider value={{ className: "jsIcon" }}>
+        <div>
+          <SiJavascript />
+        </div>
+      </IconContext.Provider>
+      <IconContext.Provider value={{ className: "SassIcon" }}>
+        <div>
+          <SiSass />
+        </div>
+      </IconContext.Provider>
+      <IconContext.Provider value={{ className: "reactIcon" }}>
+        <div>
+          <SiReact />
+        </div>
+      </IconContext.Provider>
+      <IconContext.Provider value={{ className: "nextIcon" }}>
+        <div>
+          <SiNextDotJs />
+        </div>
+      </IconContext.Provider>
+      <IconContext.Provider value={{ className: "typeScriptIcon" }}>
+        <div>
+          <SiTypescript />
+        </div>
+      </IconContext.Provider>
     </motion.div>
   );
 };
